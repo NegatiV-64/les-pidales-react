@@ -1,0 +1,15 @@
+.button {
+    outline: none;
+    border: 2px solid transparent;
+    background: var(--basePink);
+    padding: 15px 30px;
+    border-radius: 75px;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button:hover {
+    background: transparent;
+    border: 2px solid var(--basePink);
+}

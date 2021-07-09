@@ -1,0 +1,85 @@
+.header {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav */
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo img {
+    width: 360px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list li {
+    margin: 0 15px;
+}
+
+.nav__btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav__btn:hover {
+    color: var(--basePink);
+}
+
+.nav__btnIcon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.nav__btnLink {
+    outline: none;
+    border: 2px solid transparent;
+    background: var(--basePink);
+    padding: 15px 30px;
+    border-radius: 75px;
+    transition: 0.2s;
+    font-size: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.nav__btnLink:hover {
+    background: transparent;
+    border: 2px solid var(--basePink);
+}
+
+/* Header Content */
+
+.headerContent {
+    margin-top: 50px;
+}
+
+.headerContent__container {
+    display: flex;
+    justify-content: center;
+}
+
+.headerContent__container h2 {
+    padding: 50px;
+    border-bottom: 15px;
+    background: grey;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: var(--baseBlack);
+}
+
