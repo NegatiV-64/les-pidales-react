@@ -1,0 +1,31 @@
+.foodCard {
+    transition: 0.2s;
+    color: var(--baseBlack);
+}
+
+.foodCard img {
+    height: 180px;
+}
+
+.foodCard__info {
+    margin-top: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.foodCard__info h4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.foodCard__info p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.foodCard__info p:last-of-type {
+    margin-top: auto;
+    font-size: 22px;
+    font-weight: 500;
+}

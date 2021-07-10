@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Loader from './components/UI/Loader';
 import Header from './components/Layouts/Header';
+import FoodMenu from './components/Food/FoodMenu';
 import Footer from './components/Layouts/Footer';
 
 import './base.css';
@@ -13,27 +14,27 @@ const App = () => {
 
   const [loaderState, setLoaderState] = useState(false);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    document.querySelector('body').style.overflow = "hidden"
+  //   document.querySelector('body').style.overflow = "hidden"
 
-    setLoaderState(true)
+  //   setLoaderState(true)
 
-    let timer = setTimeout(() => {
-      setLoaderState(false)
-      document.querySelector('body').style.overflow = "visible"
-    }, 1500);
+  //   let timer = setTimeout(() => {
+  //     setLoaderState(false)
+  //     document.querySelector('body').style.overflow = "visible"
+  //   }, 1500);
 
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [])
+  //   return () => {
+  //     clearTimeout(timer)
+  //   }
+  // }, [])
 
   return (
     <React.Fragment>
       {loaderState && <Loader></Loader>}
       <Header />
-
+      <FoodMenu />
       <Footer />
     </React.Fragment>
   );

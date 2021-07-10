@@ -1,0 +1,49 @@
+.footer {
+    background: var(--basePink);
+    padding: 40px 0 25px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__left {
+    color: white;
+}
+
+.footer__left p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer__center {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.footer__center svg {
+    margin: 0 5px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #00d8ff;
+}
+
+.footer__center a {
+    color: white;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.footer__right {
+    display: flex;
+}
+
+.footer__right a {
+    font-size: 25px;
+    margin: 0 10px;
+    color: white;
+}
