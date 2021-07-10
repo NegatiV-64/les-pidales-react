@@ -1,10 +1,13 @@
 import React from 'react';
 
-import lesLogo from '../../resources/les_logo.png'
 import Button from '../UI/Button';
-import styles from './Header.module.css';
 
+import styles from './Header.module.css';
 import { MdShoppingCart, MdCall } from "react-icons/md"
+
+import lesLogo from '../../resources/les_logo.png'
+import burger from '../../resources/Bacon-Cheese-Burger-PNG-Pic.png'
+
 
 const Header = () => {
 
@@ -35,7 +38,12 @@ const Header = () => {
             </nav>
             <div className={styles.headerContent}>
                 <div className={styles.headerContent__container}>
-                    
+                    <img className={styles.headerContent__img} src={burger} alt="Bacon Cheese Burger" />
+                    <div className={styles.headerContent__info}>
+                        <p>С любовью</p>
+                        <h2>Пидалим для вас с <span>2014 года</span></h2>
+                        <Button className={styles.headerContent__btn}>Сделать заказ</Button>
+                    </div>
                 </div>
             </div>
         </header>
