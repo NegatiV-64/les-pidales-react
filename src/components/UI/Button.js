@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './Button.module.css'
 
 const Button = (props) => {
-    let classes = `${styles.button} ${props.className}`
+    let classes = `${styles.button} ${props.className || ""}`
     return (
-        <button className={classes}>
+        <button onClick={props.onClick} className={classes}>
             {props.children}
         </button>
     );

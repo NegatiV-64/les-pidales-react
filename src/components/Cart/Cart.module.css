@@ -1,0 +1,33 @@
+.cartWrapper {
+    padding: 25px;
+    max-height: 600px;
+    overflow-x: auto;
+}
+
+.cartWrapper__totalPriceWrapper {
+    display: flex;
+}
+
+.cartWrapper__totalPrice {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.cartWrapper__priceNum {
+    margin-left: auto;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.cartWrapper__controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartWrapper__controls button{
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}

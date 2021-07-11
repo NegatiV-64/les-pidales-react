@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Button from '../UI/Button';
+import HeaderCartButton from "./HeaderButton/HeaderCartButton"
 
 import styles from './Header.module.css';
-import { MdShoppingCart, MdCall } from "react-icons/md"
+import { MdCall } from "react-icons/md"
 
 import lesLogo from '../../resources/les_logo.png'
 import burger from '../../resources/Bacon-Cheese-Burger-PNG-Pic.png'
 
 
-const Header = () => {
+const Header = (props) => {
 
     let navClasses = `${styles.nav}`
 
@@ -32,10 +33,8 @@ const Header = () => {
                     </a>
                     <ul className={styles.nav__list}>
                         <li>
-                            <Button className={styles.nav__btn}>
-                                <MdShoppingCart className={styles.nav__btnIcon} />
-                                Моя корзина
-                            </Button>
+                            {/* <button onClick={props.onCartShow}>Click</button> */}
+                            <HeaderCartButton onCartShow={props.onCartShow}/>
                         </li>
                         <li>
                             <a href="tel:1010" className={styles.nav__btn + " " + styles.nav__btnLink}>

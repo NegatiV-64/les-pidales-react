@@ -30,11 +30,14 @@ ul {
 .nav__scroll {
     padding: 15px 0;
     top: 0;
+    z-index: 2;
     position: fixed;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 #loader {
+    position: relative;
+    z-index: 20;
     animation-name: fadeouter;
     animation-duration: 500ms;
     animation-delay: 1000ms;

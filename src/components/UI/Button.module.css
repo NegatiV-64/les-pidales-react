@@ -12,5 +12,6 @@
 
 .button:hover {
     background: transparent;
+    color: var(--basePink);
     border: 2px solid var(--basePink);
 }

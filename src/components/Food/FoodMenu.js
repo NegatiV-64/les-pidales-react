@@ -4,7 +4,7 @@ import FoodItem from './FoodItem/FoodItem';
 
 import styles from './FoodMenu.module.css'
 
-const FoodMenu = () => {
+const FoodMenu = (props) => {
 
     const [foodMenuState, setFoodMenuState] = useState([]);
 
@@ -21,6 +21,7 @@ const FoodMenu = () => {
         const MenuItem = foodMenuState.map(item =>
             <FoodItem
                 key={item.id}
+                id={item.id}
                 image={item.img}
                 name={item.name}
                 desc={item.description}

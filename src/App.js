@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
+import CartProvider from './react-context/CartProvider';
 import Loader from './components/UI/Loader';
+import Cart from './components/Cart/Cart';
 import Header from './components/Layouts/Header';
 import FoodMenu from './components/Food/FoodMenu';
 import Footer from './components/Layouts/Footer';
@@ -14,29 +18,40 @@ const App = () => {
 
   const [loaderState, setLoaderState] = useState(false);
 
-  // useEffect(() => {
+  const [cartVisable, setCartVisable] = useState(false);
 
-  //   document.querySelector('body').style.overflow = "hidden"
+  function onCartShowHandler() {
+    setCartVisable(true)
+  }
 
-  //   setLoaderState(true)
+  function onCartCloseHandler() {
+    setCartVisable(false)
+  }
 
-  //   let timer = setTimeout(() => {
-  //     setLoaderState(false)
-  //     document.querySelector('body').style.overflow = "visible"
-  //   }, 1500);
+  useEffect(() => {
 
-  //   return () => {
-  //     clearTimeout(timer)
-  //   }
-  // }, [])
+    document.querySelector('body').style.overflow = "hidden"
+
+    setLoaderState(true)
+
+    let timer = setTimeout(() => {
+      setLoaderState(false)
+      document.querySelector('body').style.overflow = "visible"
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
 
   return (
-    <React.Fragment>
+    <CartProvider>
       {loaderState && <Loader></Loader>}
-      <Header />
-      <FoodMenu />
+      {cartVisable && <Cart onCartClose={onCartCloseHandler}/>}
+      <Header onCartShow={onCartShowHandler} />
+      <FoodMenu/>
       <Footer />
-    </React.Fragment>
+    </CartProvider>
   );
 }
 

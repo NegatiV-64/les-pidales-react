@@ -11,11 +11,18 @@
     justify-content: center;
 }
 
+.foodCard__inputWrapper button {
+    margin: 0 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
 .foodCard__inputWrapper svg {
     font-size: 35px;
     color: white;
     fill: var(--basePink);
-    margin: 0 10px;
 }
 
 .foodCard__input {
