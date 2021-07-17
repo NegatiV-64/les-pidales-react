@@ -35,8 +35,6 @@ const Cart = (props) => {
         />
     )
 
-
-
     let totalPrice = `${contextData.totalPrice} сум`;
 
     let cartItemsLenght = contextData.items.length > 0;
