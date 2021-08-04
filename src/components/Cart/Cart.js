@@ -8,17 +8,20 @@ import cartContext from '../../react-context/cart-context';
 const Cart = (props) => {
     const contextData = useContext(cartContext);
 
-
     function onOneItemAddCartHadler(item) {
-
-        let newData = {...item, amount: 1}
-
+        let newData = { ...item, amount: 1 }
         contextData.addItem(newData)
         console.log(newData);
     }
 
     function onOneItemRemoveCartHandler(item) {
         contextData.removeItem(item);
+    }
+
+    function onFinalOrderClickHandler(e) {
+        e.preventDefault();
+        props.onOrderShow(true);
+        props.onCartClose(false);
     }
 
     let cartItems = contextData.items.map(item =>
@@ -50,7 +53,7 @@ const Cart = (props) => {
                     <Button onClick={props.onCartClose} className={styles.cartWrapper__close}>Закрыть</Button>
                     {
                         cartItemsLenght &&
-                        <Button className={styles.cartWrapper__order}>Заказать</Button>
+                        <Button onClick={onFinalOrderClickHandler} className={styles.cartWrapper__order}>Заказать</Button>
                     }
                 </div>
             </div>

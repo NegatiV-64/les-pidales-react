@@ -4,7 +4,7 @@ import Button from '../UI/Button';
 import HeaderCartButton from "./HeaderButton/HeaderCartButton"
 
 import styles from './Header.module.css';
-import { MdCall } from "react-icons/md"
+import { MdCall } from "react-icons/md";
 
 import lesLogo from '../../resources/les_logo.png'
 import burger from '../../resources/Bacon-Cheese-Burger-PNG-Pic.png'
@@ -33,7 +33,6 @@ const Header = (props) => {
                     </a>
                     <ul className={styles.nav__list}>
                         <li>
-                            {/* <button onClick={props.onCartShow}>Click</button> */}
                             <HeaderCartButton onCartShow={props.onCartShow}/>
                         </li>
                         <li>

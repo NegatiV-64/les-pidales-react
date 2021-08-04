@@ -1,0 +1,61 @@
+.cheque__wrapper {
+    padding: 25px;
+    max-height: 600px;
+    overflow-x: auto;
+    color: var(--baseBlack);
+}
+
+.cheque__wrapper h3 {
+    font-size: 25px;
+}
+
+.cheque__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cheque__table {
+    margin-top: 15px;
+}
+
+.cheque__tableName {
+    font-weight: 500;
+}
+
+.cheque__tableRow {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.cheque__tableAmount {
+    margin-left: 2px;
+}
+
+.cheque__tablePrice {
+    margin-left: 5px;
+}
+
+.cheque__client {
+    margin-top: 10px;
+}
+
+.cheque__client p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.cheque__container h4 {
+    margin-top: 15px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.button {
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+}

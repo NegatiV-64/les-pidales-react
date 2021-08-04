@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import cartContext from './cart-context';
 
 // Defining the default value for the Reducer 
@@ -62,6 +62,12 @@ function cartReducerHandler(stateSnap, action) {
                 totalPrice: updatedTotalPrice
             }
 
+        case "RESET_CART": 
+            return {
+                items: [],
+                totalPrice: 0
+            }
+
         default:
             break;
     }
@@ -72,6 +78,7 @@ function cartReducerHandler(stateSnap, action) {
 const CartProvider = (props) => {
 
     const [cartState, dispatchCartState] = useReducer(cartReducerHandler, defaultCartValue);
+    const [personInfoState, setPersonInfoState] = useState({});
 
     function addItemToCartHandler(item) {
         dispatchCartState({
@@ -86,12 +93,24 @@ const CartProvider = (props) => {
             itemToGet: item
         })
     }
+    function onAddPersonData(obj) {
+        setPersonInfoState(obj);
+    }
+
+    function resetCartHandler() {
+        dispatchCartState({
+            typeOfAction: "RESET_CART",
+        })
+    }
 
     let CartContextState = {
         items: cartState.items,
         totalPrice: cartState.totalPrice,
         addItem: addItemToCartHandler,
-        removeItem: removeItemFromCartHandler
+        removeItem: removeItemFromCartHandler,
+        personData: personInfoState,
+        setPersonData: onAddPersonData,
+        resetCartItems: resetCartHandler,
     }
 
     return (
