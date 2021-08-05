@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/les-pidales-react/static/css/main.865c58de.chunk.css",
+    "main.js": "/les-pidales-react/static/js/main.167b7989.chunk.js",
+    "main.js.map": "/les-pidales-react/static/js/main.167b7989.chunk.js.map",
+    "runtime-main.js": "/les-pidales-react/static/js/runtime-main.f5d100ff.js",
+    "runtime-main.js.map": "/les-pidales-react/static/js/runtime-main.f5d100ff.js.map",
+    "static/js/2.6481482a.chunk.js": "/les-pidales-react/static/js/2.6481482a.chunk.js",
+    "static/js/2.6481482a.chunk.js.map": "/les-pidales-react/static/js/2.6481482a.chunk.js.map",
+    "index.html": "/les-pidales-react/index.html",
+    "static/css/main.865c58de.chunk.css.map": "/les-pidales-react/static/css/main.865c58de.chunk.css.map",
+    "static/js/2.6481482a.chunk.js.LICENSE.txt": "/les-pidales-react/static/js/2.6481482a.chunk.js.LICENSE.txt",
+    "static/media/Bacon-Cheese-Burger-PNG-Pic.a26e6bf4.png": "/les-pidales-react/static/media/Bacon-Cheese-Burger-PNG-Pic.a26e6bf4.png",
+    "static/media/fonts.css": "/les-pidales-react/static/media/Roboto-Thin.b8339154.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5d100ff.js",
+    "static/js/2.6481482a.chunk.js",
+    "static/css/main.865c58de.chunk.css",
+    "static/js/main.167b7989.chunk.js"
+  ]
+}

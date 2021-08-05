@@ -1,0 +1,58 @@
+[
+    {
+      "id": "singer1",
+      "name": "Singer",
+      "img": "./burgerPhotos/singer.png",
+      "description": "Мягкая булочка, нежное куриное филе (Halal) в фирменной панировке, маринованные огурцы, салатные листья, соусы Майонез и CHILI",
+      "price": 16500
+    },
+    {
+      "id": "xalapenie1",
+      "name": "Xalapenie",
+      "img": "./burgerPhotos/xalapenio.png",
+      "description": "Мягкая булочка, нежное куриное филе (Halal) в фирменной панировке, свежие помидоры, салатные листья, острый перец XALAPENIE, соусы Майонез и Кетчуп",
+      "price": 18000
+    },
+    {
+      "id": "fresher1",
+      "name": "Fresher",
+      "img": "./burgerPhotos/fresher.png",
+      "description": "Мягкая булочка, нежное куриное филе (Halal) в фирменной панировке, сыр Чеддер, свежие помидоры, маринованные огурцы, салатные листья, лук, соусы Майонез и Кетчуп",
+      "price": 17000
+    },
+    {
+      "id": "bigger1",
+      "name": "Bigger",
+      "img": "./burgerPhotos/bigger.png",
+      "description": "Мягкая булочка, копченная говядина (Halal), нежное куриное филе (Halal) в фирменной панировке, сыр Чеддер, свежие помидоры, маринованные огурцы, салатные листья, соусы Майонез и Кетчуп",
+      "price": 18000
+    },
+    {
+      "id": "doubleChikenCheese1",
+      "name": "Double Chiken Cheese",
+      "img": "./burgerPhotos/double-chicken-cheese.png",
+      "description": "Мягкая булочка, копченная говядина (Halal), нежное куриное филе (Halal) в фирменной панировке, сыр Чеддер, свежие помидоры, маринованные огурцы, салатные листья, соусы Майонез и Кетчуп",
+      "price": 22000
+    },
+    {
+      "id": "chikenBurger1",
+      "name": "Chiken burger",
+      "img": "./burgerPhotos/chiken-burger.png",
+      "description": "Мягкая булочка, сочная куриная котлета (Halal), свежие помидоры, салатные листья Айсберг, соусы Майонез и Кетчуп",
+      "price": 18500
+    },
+    {
+      "id": "chikenCheese1",
+      "name": "Chiken cheese",
+      "img": "./burgerPhotos/cheeken-cheese.png",
+      "description": "Мягкая булочка, сочная куриная котлета (Halal), сыр Чеддер, свежие помидоры, салатные листья Айсберг, соусы Майонез и Кетчуп",
+      "price": 19000
+    },
+    {
+      "id": "classicBurger1",
+      "name": "Classic burger",
+      "img": "./burgerPhotos/classic-burger.png",
+      "description": "Мягкая булочка, копченная говядина (Halal), нежное куриное филе (Halal) в фирменной панировке, сыр Чеддер, свежие помидоры, маринованные огурцы, салатные листья, соусы Майонез и Кетчуп",
+      "price": 16000
+    }
+  ]
