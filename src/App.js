@@ -53,7 +53,7 @@ const App = () => {
     let timer = setTimeout(() => {
       setLoaderState(false)
       document.querySelector('body').style.overflow = "visible"
-    }, 10);
+    }, 1500);
 
     return () => {
       clearTimeout(timer)
