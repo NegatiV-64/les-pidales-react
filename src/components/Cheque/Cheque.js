@@ -6,12 +6,7 @@ import Button from '../UI/Button';
 import styles from './Cheque.module.css'
 
 const Cheque = (props) => {
-
     const contextData = useContext(cartContext);
-
-    console.log(contextData.items);
-    console.log(contextData.totalPrice);
-    console.log(contextData.personData);
 
     let orderedFood = contextData.items.map(item =>
         <div key={item.id} className={styles.cheque__tableRow}>
@@ -20,6 +15,30 @@ const Cheque = (props) => {
             <div className={styles.cheque__tablePrice}>{+item.price * +item.amount}</div>
         </div>
     );
+
+    async function sendDataToBot(messageText) {
+        try {
+            const response = await fetch(
+                "https://api.telegram.org/bot1704742052:AAFQxq3mx9MDZrna356tEiwzf37FkvzbiZE/sendMessage",
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        chat_id: "71474323",
+                        text: messageText,
+                        parse_mode: "markdown"
+                    }),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                }
+            );
+            if (!response.ok) {
+                throw new Error('Ошибка при получении данных с сервера');
+            }
+        } catch (error) {
+            alert("Ошибка при заказе!");
+        }
+    }
 
     function onFinalOrderHandler(e) {
         e.preventDefault();
@@ -34,25 +53,10 @@ const Cheque = (props) => {
         const messageText = `
         *Новый заказ*\nЗаказ №${new Date().getDate() + 1}/${new Date().getHours()}${new Date().getMinutes()}${new Date().getMilliseconds()}\nИмя: ${fullOrder.orderedPersonName}\nНомер: ${fullOrder.orderedPhone}\nАдрес: ${fullOrder.orderedAddress}\n${fullOrder.orderedFood.map(item => `${item.name}. Количество: ${item.amount}\n`)}
         `
+        sendDataToBot(messageText)
 
-        fetch("https://api.telegram.org/bot1704742052:AAFQxq3mx9MDZrna356tEiwzf37FkvzbiZE/sendMessage", {
-            method: "POST",
-            body: JSON.stringify({
-                chat_id: "71474323",
-                text: messageText,
-                parse_mode: "markdown"
-            }),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .then(contextData.resetCartItems())
-            .catch(error => console.log("Error: " + error))
-        props.onChequeClose()
+        props.onChequeClose();
     }
-
 
     return (
         <Modal>
@@ -74,6 +78,6 @@ const Cheque = (props) => {
             </div>
         </Modal>
     );
-}
+};
 
 export default Cheque;
