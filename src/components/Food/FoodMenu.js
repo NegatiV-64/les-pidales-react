@@ -59,14 +59,16 @@ const FoodMenu = (props) => {
     }
 
     return (
-        <section className={styles.food}>
-            <div className={foodContainer}>
-                <h2 className={styles.food__title}>Наше Меню</h2>
-                <div className={styles.food__row}>
-                    {menuContent}
+        <main> 
+            <section className={styles.food}>
+                <div className={foodContainer}>
+                    <h2 className={styles.food__title}>Наше Меню</h2>
+                    <div className={styles.food__row}>
+                        {menuContent}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     );
 }
 

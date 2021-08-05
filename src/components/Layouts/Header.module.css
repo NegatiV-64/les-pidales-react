@@ -117,6 +117,7 @@
 
 .headerContent__btn:hover {
     border: none;
+    color: white;
     background: #e2315d radial-gradient(circle, transparent 1%, #e31145 1%) center/15000%;
 }
 
